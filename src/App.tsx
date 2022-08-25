@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useAppDispatch, useAppSelector } from "./app/hooks";
-import { incremented } from "./features/counter/counterSlice";
+import { amountAdded } from "./features/counter/counterSlice";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
 
@@ -11,7 +11,8 @@ function App() {
   const dispatch = useAppDispatch();
 
   const onClick = () => {
-    dispatch(incremented());
+    // dispatch(incremented());
+    dispatch(amountAdded(3));
   };
 
   return (
